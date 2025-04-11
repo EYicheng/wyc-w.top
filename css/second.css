@@ -3,6 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .li {
@@ -29,6 +33,7 @@
 
 .status h4 {
   font-weight: 600;
+  font-weight: normal;
 }
 
 .status:before {
