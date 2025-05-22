@@ -1,0 +1,10 @@
+.first1{
+    backdrop-filter: blur(30px);
+    width: 50%;
+    left: 0px;
+    position: fixed;
+    backdrop-filter: blur(30px);
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+}

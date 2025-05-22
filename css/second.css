@@ -33,7 +33,7 @@
 
 .status h4 {
   font-weight: 600;
-  font-weight: normal;
+  /* font-weight: normal; */
 }
 
 .status:before {

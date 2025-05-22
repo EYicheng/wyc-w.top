@@ -3,6 +3,13 @@ body {
     text-shadow: 0px 0px 55px #000000;
 }
 
+.first {
+    backdrop-filter: blur(30px);
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+}
+
 .second {
     backdrop-filter: blur(30px);
     width: 90%;
