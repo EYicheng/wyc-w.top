@@ -106,10 +106,15 @@
             font-weight: bold;
             text-decoration: none;
         }
+
+        small {
+            font: xx-small;
+        }
     </style>
 </head>
 
 <body>
+
     <!-- <video class="bg-video" autoplay loop muted width="100%" height="100%"> -->
     <!-- <source src="https://public.ysjf.com/mediastorm/banner/5294c11cb3ed6be81d6f855f42b0bfb8.webm" video/mp4"> -->
     <!-- </video> -->
@@ -134,12 +139,23 @@
     </div>
     <div class="bodyer">
         <div class="center-content">
-            <p
-                style="font: bold; color: #ffffff; font-size: xx-large; font-family: Lyon-Text, Georgia, ui-serif, serif;">
-                <i><strong>- 無限進步 -</strong></i>
+            <p style="
+                font: bold;
+                color: #ffffff;
+                font-size: xx-large;
+                font-family: Lyon-Text, Georgia, ui-serif, serif;
+                text-shadow: 0 8px 50px #000000;
+                text-align: center;">
+                <i><strong>- 九万里风鹏正举 -</strong></i><br>
+                <i><strong><small>《天空没有极限》</small></strong></i>
+
             </p>
         </div>
     </div>
+
+    <audio autoplay loop controls>
+        <source src="more/天空没有极限.mp3" type="audio/mpeg">
+    </audio>
 
     <main class="main">
         <h1 style="font-size: 3em; ">我的博客节选</h1>
@@ -156,7 +172,6 @@
             <ul id="recent-list"></ul>
         </section>
     </aside>
-
     <script>
         // 配置
         const MD_REPO = 'https://blog-data.wyc-w.top/'; // 替换为你的仓库
@@ -295,12 +310,12 @@
             if (!isThrottled) {
                 const scrollPosition = window.scrollY || document.documentElement.scrollTop;
                 console.log("当前滚动条位置: ", scrollPosition);
-                if (scrollPosition > document.documentElement.clientHeight) {
+                if (scrollPosition > document.documentElement.clientHeight * 0.9) {
                     document.getElementById('header').style.backgroundColor = '#ffffff';
-                    // document.getElementById('header').style.boxShadow = ' 0 1px 20px rgba(0, 0, 0, 0.397)';
+                    document.getElementById('header').style.boxShadow = ' 0 1px 20px rgba(0, 0, 0, 0.397)';
                 } else {
                     document.getElementById('header').style.backgroundColor = '#ffffff00';
-                    document.getElementById('header').style.boxShadow = ' 0 0 0 rgba(0, 0, 0, 0)';
+                    document.getElementById('header').style.boxShadow = ' 0 0px 0px rgba(0, 0, 0, 0)';
                 }
             }
             isThrottled = true;
