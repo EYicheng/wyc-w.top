@@ -1,95 +1,330 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="ZH-CN">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="王一澄">
-    <meta name="keywords" content="王一澄的网站、王一澄、Eason的网站">
-    <meta name="description" content="欢迎来到王一澄的网站！ヾ(≧▽≦*)o">
-    <title>王一澄的网站</title>
-    <link rel="shortcut icon" href="./index/footage/1.png" type="image/x-icon">
-    <link rel="stylesheet" href="index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EYiCheng_的主页">
+    <meta name="keywords" content="王一澄, Yicheng., EYicheng, 疫惩, EYicheng_, 个人主页, 个人网站, 个人博客, 个人介绍, ">
+    <meta name="author" content="EYiCheng_">
+    <title>EYiCheng_的主页</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* .bg-video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 8;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            z-index: -1;
+        } */
+
+        .header {
+            z-index: 10;
+            background-color: #ffffff00;
+            height: 70px;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            position: fixed;
+        }
+
+        .header .div {
+            /* background-color: aqua; */
+            height: 70px;
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .header .div .left,
+        .header .div .right {
+            height: 70px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .div .left {
+            justify-content: flex-start;
+        }
+
+        .header .div .right {
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .right {
+            text-align: right;
+            float: none;
+            position: static;
+            right: auto;
+        }
+
+        .bodyer {
+            /* z-index: -2; */
+            height: 100vh;
+            width: 100vw;
+            background-image: url(index/footage/background/3.jpg);
+            /* 背景图垂直、水平均居中 */
+            background-position: center center;
+            /* 背景图不平铺 */
+            background-repeat: no-repeat;
+            /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+            background-attachment: fixed;
+            /* 让背景图基于容器大小伸缩 */
+            background-size: cover;
+            /* 设置背景颜色，背景图加载过程中会显示背景色 */
+            background-color: #464646;
+        }
+
+        .center-content {
+            /* z-index: -1; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        a {
+            z-index: 100;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        small {
+            font: xx-small;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="top_bar">
-        <nav>
-            <a href="https://wyc-w.top" target="_blank">首页</a>
-            <a href="https://github.com/wyc-e/wyc-w.top" target="_blank">网页开源</a>
-            <a href="./index/历史版本/index.html" target="_blank">历史版本</a>
-            <a href="./more/bqb.html" target="_blank">表情包</a>
-            <a href="https://www.baidu.com" target="_blank">百度</a>
-        </nav>
-        <nav>
-            <a href="./more/我的app/王一澄的app.apk" target="_blank">我的软件</a>
-            <a href="./more/小游戏/index.html" target="_blank">小游戏</a>
-            <a href="https://www.bitbug.net/" target="_blank">比特虫——ico图标转换工具</a>
-            <a href="./more/index.html" target="_blank">更多</a>
-        </nav>
-    </header>
-    <main class="global_style">
-        <img src="./index/footage/homeplogo.png" alt="网站Logo" width="140">
-        <p style="color: white; text-shadow: 5px 5px 10px #000000; font-size: 30px;">
-            欢迎来到王一澄的网站！
-        </p>
-        <p class="actually">
-            （其实这个网站纯属屎山，啥也不是）
-        </p>
+
+    <!-- <video class="bg-video" autoplay loop muted width="100%" height="100%"> -->
+    <!-- <source src="https://public.ysjf.com/mediastorm/banner/5294c11cb3ed6be81d6f855f42b0bfb8.webm" video/mp4"> -->
+    <!-- </video> -->
+    <div class="header" id="header">
+        <div class="div">
+            <nav class="left">
+                <img src="./index/footage/1.png" alt="" height="50px">
+                <div style="width: 10px;"></div>
+                <p style="font-family: Lyon-Text, Georgia, ui-serif, serif;">
+                    <strong>EYiCheng_的主页</strong>
+                </p>
+            </nav>
+            <nav class="right">
+                <a href="https://wyc-w.top" target="_blank">首页</a>
+                <a href="https://github.com/wyc-e/wyc-w.top" target="_blank">网页开源</a>
+                <a href="./index/历史版本/index.html" target="_blank">历史版本</a>
+                <a href="./more/bqb.html" target="_blank">表情包</a>
+                <a href="./more/小游戏/index.html" target="_blank">小游戏</a>
+                <a href="./more/index.html" target="_blank">更多</a>
+            </nav>
+        </div>
+    </div>
+    <div class="bodyer">
+        <div class="center-content">
+            <p style="
+                font: bold;
+                color: #ffffff;
+                font-size: xx-large;
+                font-family: Lyon-Text, Georgia, ui-serif, serif;
+                text-shadow: 0 8px 50px #000000;
+                text-align: center;">
+                <i><strong>- 九万里风鹏正举 -</strong></i><br>
+                <i><strong><small>《天空没有极限》</small></strong></i>
+
+            </p>
+        </div>
+    </div>
+
+    <audio autoplay loop controls>
+        <source src="more/天空没有极限.mp3" type="audio/mpeg">
+    </audio>
+
+    <main class="main">
+        <h1 style="font-size: 3em; ">我的博客节选</h1>
+        <br>
+        <div id="posts-list" class="posts-grid">
+            <p>加载中...</p>
+        </div>
     </main>
 
-    <aside class="right-text">
-        <div class="clock">
-            <a href="https://time.is/Beijing" id="time_is_link" rel="nofollow">北京时间:</a>
-            <span id="Beijing_z43d"></span>
-            <script src="//widget.time.is/zh.js"></script>
-            <script>
-                time_is_widget.init({ Beijing_z43d: { template: "TIME<br>DATE<br>SUN", date_format: "year年mnum月dnum日dayname", sun_format: "日出: srhour:srminute 日落: sshour:ssminute<br>昼长: dlhours时 dlminutes分", coords: "39.9075000,116.3972300" } });
-            </script>
-        </div>
-
-        <div class="glass">
-            <div id="ww_7c108cf4f2039" v='1.3' loc='auto'
-                a='{"t":"horizontal","lang":"zh","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF00","cl_font":"rgba(255,255,255,1)","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
-                <a href="https://weatherwidget.org/zh/" id="ww_7c108cf4f2039_u" target="_blank">天气插件</a>
-            </div>
-            <script async src="https://app2.weatherwidget.org/js/?id=ww_7c108cf4f2039"></script>
-        </div>
-        <hr>
-        <div class="muisc">
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="420" height="300"
-                src="//music.163.com/outchain/player?type=0&id=13141347514&auto=1&height=300"></iframe>
-        </div>
-        <br>
-        <br>
+    <!-- 侧边栏：最新文章（保持不变） -->
+    <aside class="sidebar">
+        <section class="widget recent-posts">
+            <h3>最新文章</h3>
+            <ul id="recent-list"></ul>
+        </section>
     </aside>
-    <footer class="bottomtext">
-        <img src="./index/footage/向下.png" width="50" class="abcd">
-        <div>
-            <div id="markdownContent"></div>
-            <a id="inputmarkdown"
-                style="color: white; text-shadow: 1px 1px 1px #000000; font-weight: bold; text-decoration: none; font-size: 30px;">点击这里加载markdown</a>
-        </div>
-        <hr>
-        <div>
-            <div id="markdownContent_web"></div>
-            <p id="markdown!" style="color: white; text-shadow: 1px 1px 1px #000000; font-weight: bold;">
-                !以上部分由Github上的Markdown直接渲染，有可能会出现加载慢或加载有问题的情况!</p>
-        </div>
-        <hr>
-        <div>
-            <div style="color: rgb(0, 0, 0);">
-                <a style="color: white; text-shadow: 1px 1px 1px #000000; font-weight: bold; text-decoration: none;"
-                    href="https://a.wyc-w.top">α版本</a>
-                <a style="color: white; text-shadow: 1px 1px 1px #000000; font-weight: bold; text-decoration: none;"
-                    href="https://b.wyc-w.top">β版本</a>
-                <a style="color: white; text-shadow: 1px 1px 1px #000000; font-weight: bold; text-decoration: none;"
-                    href="https://g.wyc-w.top">γ版本</a>
-            </div>
-        </div>
-    </footer>
-    <script type="text/javascript" src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // 配置
+        const MD_REPO = 'https://blog-data.wyc-w.top/'; // 替换为你的仓库
+        const LIST_JSON = 'list.json';
+        const INDEX_MD = 'index.md';
+
+        let listCache = null; // 缓存 list.json
+
+        // 启用 marked 插件（用于解析，但不渲染正文）
+        if (typeof markedEmoji !== 'undefined') {
+            marked.use(markedEmoji());
+        }
+        if (typeof markedFootnote !== 'undefined') {
+            marked.use(markedFootnote());
+        }
+
+        // 解析 front-matter 并提取元数据
+        function parseFrontMatter(text) {
+            const metaRegex = /^---\s*\n([\s\S]*?)\n---/;
+            const metaMatch = text.match(metaRegex);
+            const meta = {
+                title: '无标题',
+                date: '未知日期',
+                category: '未分类',
+                summary: '暂无摘要'
+            };
+            if (metaMatch) {
+                metaMatch[1].split('\n').forEach(line => {
+                    const [key, ...rest] = line.split(':');
+                    if (key && rest.length) {
+                        const value = rest.join(':').trim();
+                        if (['title', 'date', 'category', 'summary'].includes(key.trim())) {
+                            meta[key.trim()] = value;
+                        }
+                    }
+                });
+            }
+            return meta;
+        }
+
+        // 获取 Markdown 文件并提取元信息
+        async function fetchPostMeta(path) {
+            try {
+                const res = await fetch(`${MD_REPO}/${path}`);
+                if (!res.ok) throw new Error(`加载失败: ${path}`);
+                const text = await res.text();
+                return parseFrontMatter(text);
+            } catch (e) {
+                console.error(e);
+                return {
+                    title: '加载失败',
+                    date: '—',
+                    category: '—',
+                    summary: '无法获取内容',
+                    path: path
+                };
+            }
+        }
+
+        // 加载 list.json 并渲染主内容区 + 侧边栏
+        async function loadAll() {
+            try {
+                // 加载 list.json
+                if (!listCache) {
+                    const res = await fetch(`${MD_REPO}/${LIST_JSON}`);
+                    if (!res.ok) throw new Error('list.json 加载失败');
+                    listCache = await res.json();
+                }
+
+                const posts = listCache.slice(0, 5); // 前5篇文章
+
+                // 获取每篇文章的元信息
+                const metas = await Promise.all(
+                    posts.map(async (post) => {
+                        const meta = await fetchPostMeta(post.path);
+                        meta.path = post.path; // 保留路径用于链接
+                        return meta;
+                    })
+                );
+
+                // 渲染主内容区：文章摘要卡片
+                renderPostsList(metas);
+
+                // 渲染侧边栏：最新文章（仅显示标题列表）
+                renderSidebar(listCache);
+
+            } catch (e) {
+                document.getElementById('posts-list').innerHTML =
+                    `<div><h2>加载失败</h2><p>${e.message}</p></div>`;
+                document.getElementById('recent-list').innerHTML = '<li>加载失败</li>';
+            }
+        }
+
+        // 渲染主内容区：文章卡片列表
+        function renderPostsList(metas) {
+            const container = document.getElementById('posts-list');
+            container.innerHTML = metas.map(meta => `
+        <article class="post-card">
+          <h1>${meta.title}</h1>
+          <p><strong>日期：</strong>${meta.date}</p>
+          <p><strong>分类：</strong>${meta.category}</p>
+          <p><strong>摘要：</strong>${meta.summary}</p>
+          <a href="https://blog.wyc-w.top/reader.html?page=${meta.path}" class="btn-read-more">阅读全文</a>
+        </article>
+      `).join('');
+        }
+
+        // 渲染侧边栏：最新文章（仅标题列表）
+        function renderSidebar(list) {
+            const recentHtml = list.slice(0, 5)
+                .map(p => `<li><a href="./reader.html?page=${p.path}">${p.name}</a></li>`)
+                .join('');
+            document.getElementById('recent-list').innerHTML = recentHtml;
+        }
+
+        // 汉堡菜单逻辑
+        function initHamburger() {
+            const hamburger = document.querySelector('.hamburger');
+            const navList = document.querySelector('.nav-list');
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navList.classList.toggle('active');
+            });
+        }
+
+        // 页面初始化
+        window.addEventListener('load', () => {
+            loadAll();
+            initHamburger();
+            // 如果未来支持路由切换，可监听 popstate
+            // window.addEventListener('popstate', loadAll);
+        });
+
+        let isThrottled = false;  // 节流标记
+        function handleScroll() {
+            if (!isThrottled) {
+                const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+                console.log("当前滚动条位置: ", scrollPosition);
+                if (scrollPosition > document.documentElement.clientHeight * 0.9) {
+                    document.getElementById('header').style.backgroundColor = '#ffffff';
+                    document.getElementById('header').style.boxShadow = ' 0 1px 20px rgba(0, 0, 0, 0.397)';
+                } else {
+                    document.getElementById('header').style.backgroundColor = '#ffffff00';
+                    document.getElementById('header').style.boxShadow = ' 0 0px 0px rgba(0, 0, 0, 0)';
+                }
+            }
+            isThrottled = true;
+            setTimeout(() => isThrottled = false, 100); // 100毫秒后允许下一次触发
+        }
+
+        // 重新绑定滚动事件
+        window.addEventListener('scroll', handleScroll);
+    </script>
 </body>
 
 </html>

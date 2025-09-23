@@ -1,0 +1,18 @@
+body {
+    font-family: "Tahoma", "黑体";
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    /* margin: 0; */
+    /* position: relative; */
+    text-align: center;
+    font-weight: normal;
+}
+
+/* h1 {
+} */
+
+.blod {
+    font-weight: bold;
+    font-size: 1.25em;
+}
